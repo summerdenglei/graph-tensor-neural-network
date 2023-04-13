@@ -1,6 +1,6 @@
 %% generateing traning and testing data
 clear
-load Abilene_288_168_144
+load Abilene_288_168_144_single
 T=double(T);
 data=zeros(168,12,24,144);
 for j=1:168

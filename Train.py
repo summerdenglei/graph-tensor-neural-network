@@ -25,7 +25,7 @@ trainPhi = np.ones([batchSize, 12, 24, 144])#
 
 L= trainLabel.shape[3]
 
-num_missing = round(0.7*L) # 0.7 is the missing rate
+num_missing = round(0.7*L) # select 70% OD pairs for taking measurements.
 index = np.arange(L, dtype=int)
 np.random.seed(1)
 np.random.shuffle(index)

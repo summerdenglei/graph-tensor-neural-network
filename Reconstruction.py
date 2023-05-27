@@ -1,8 +1,3 @@
-#       Video Synthesis via Transform-Based Tensor Neural Network
-#                             Yimeng Zhang
-#                               8/4/2020
-#                         yz3397@columbia.edu
-
 
 import LoadData as LD
 import BuildModel as BM

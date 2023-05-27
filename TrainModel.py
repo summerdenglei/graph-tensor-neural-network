@@ -1,9 +1,3 @@
-#       Video Synthesis via Transform-Based Tensor Neural Network
-#                             Yimeng Zhang
-#                               8/4/2020
-#                         yz3397@columbia.edu
-
-
 import numpy as np
 import DefineParam as DP
 import os

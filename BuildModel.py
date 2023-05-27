@@ -15,7 +15,7 @@ pixel_w, pixel_h, batchSize, nPhase, nTrainData, nValData, learningRate, nEpoch,
 # Model Building
 def build_model(phi, missing_index, restore=False):
 
-    Xinput, Xoutput, Phi, PhiT, Yinput, Epoch_num, Y, Z = LD.pre_calculate(phi)#占位
+    Xinput, Xoutput, Phi, PhiT, Yinput, Epoch_num, Y, Z = LD.pre_calculate(phi)
 
     prediction, predictionSymmetric, transField, lambdaStep, softThr = inference_ista(Y, Z, Xinput, Xoutput, Phi, PhiT, Yinput, Epoch_num, reuse=False)
 
@@ -131,10 +131,10 @@ def ista_block(layertensorY, layertensorZ, layerxk, layeryk, Phi, PhiT, Yinput, 
     sFrk = tf.nn.conv2d(sFrk, weight4, strides=[1, 1, 1, 1], padding='SAME')
 
     # rk difference
-    symmetric = sFrk - rk  #转换到频域前、频域后再逆变换回来，的区别。不考虑软阈值
+    symmetric = sFrk - rk  
     return xk, yk, zk, symmetric, field, lambdaStep, softThr
 
-# def ista_block(layertensorY, layertensorZ, layerxk, layeryk, Phi, PhiT, Yinput, Epoch_num): # 1个conv2d作为变换矩阵
+# def ista_block(layertensorY, layertensorZ, layerxk, layeryk, Phi, PhiT, Yinput, Epoch_num): 
 #
 #     # Parameters
 #     lambdaStep = tf.Variable(0.1, dtype=tf.float32)

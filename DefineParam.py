@@ -14,8 +14,8 @@ def get_param():
     ncpkt = 290 #290--2
 
     trainFile = './trainData/graph_traffic_train.mat' #training data
-    #trainFile = 'E:/DengLei/Transform-Based-Tensor-Net-master\trainData/trainUCF.mat'
-    valFile = './valData/graph_traffic_val.mat'  #test dataset. Validation dataset is also the test dataset.
+    
+    valFile = './valData/graph_traffic_val.mat'  #test dataset. 
 
     saveDir = './recImg/recImgFinal'
     modelDir = './Model_Int'
